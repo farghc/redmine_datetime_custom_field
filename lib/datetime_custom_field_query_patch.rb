@@ -1,5 +1,5 @@
-require_dependency 'query'
-require_dependency 'issue_query'
+require 'query'
+require 'issue_query'
 
 # Module mixed with Query model
 

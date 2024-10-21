@@ -12,13 +12,12 @@ Redmine::Plugin.register :redmine_datetime_custom_field do
   requires_redmine :version_or_higher => '3.1.1'
 end
 
-# Custom patches
-require_dependency 'hooks'
+require_relative 'lib/redmine_datetime_custom_field.rb'
 
 Rails.application.config.to_prepare do
-  require_dependency 'datetime_custom_field_application_helper_patch'
-  require_dependency 'datetime_custom_field_field_format_patch'
-  require_dependency 'datetime_custom_field_custom_fields_helper_patch'
+  require_relative 'lib/application_helper.rb'
+  require_relative 'lib/datetime_custom_field_field_format_patch'
+  require_relative 'lib/datetime_custom_field.rb'
 
-  require_dependency 'datetime_custom_field_query_patch'
+  require_relative 'lib/datetime_custom_field_query_patch'
 end

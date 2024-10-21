@@ -1,4 +1,4 @@
-require_dependency 'redmine/field_format'
+require 'redmine/field_format'
 
 module Redmine
   module FieldFormat
@@ -72,4 +72,7 @@ class DateTimeValidator < ActiveModel::EachValidator
       end
     end
   end
+end
+
+module DatetimeCustomFieldFieldFormatPatch
 end

@@ -1,4 +1,4 @@
-require_dependency 'custom_fields_helper'
+require 'custom_fields_helper'
 
 module DatetimeCustomField
   module CustomFieldsHelperPatch

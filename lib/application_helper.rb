@@ -1,4 +1,4 @@
-require_dependency 'application_helper'
+require 'application_helper'
 
 module ApplicationHelper
   ###################
